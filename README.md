@@ -15,3 +15,46 @@ taroShop
   <img src="https://github.com/user-attachments/assets/e762047d-c02e-4a46-b5e4-bb09d9120298" width="300" />
   <img src="https://github.com/user-attachments/assets/b0506e23-6671-442b-98ae-562fa61384ef" width="300" />
 </div>
+
+### 1. Убедитесь, что RabbitMQ установлен и запущен
+
+
+После установки RabbitMQ запустите его:
+
+```bash
+# Для Windows
+rabbitmq-server
+
+# Для Linux (если установлен через apt)
+sudo systemctl start rabbitmq-server
+```
+
+Вы можете проверить, что RabbitMQ работает, открыв веб-интерфейс по адресу `http://localhost:15672`. Войдите, используя учетные данные по умолчанию: `guest` / `guest`.
+
+### 2. Запустите сервер Django
+
+Перейдите в корневую директорию вашего Django проекта и выполните команду:
+
+```bash
+python manage.py runserver
+```
+
+Это запустит сервер на `http://127.0.0.1:8000` (по умолчанию).
+
+### 3. Запустите Celery worker
+
+Откройте новый терминал и перейдите в директорию вашего проекта, затем запустите Celery worker:
+
+```bash
+celery -A myshop worker --loglevel=info
+```
+
+Замените `myshop` на имя вашего приложения, если оно другое. Это запустит Celery и подключит его к RabbitMQ.
+
+### 4. Проверка
+
+Теперь у вас должны работать три компонента:
+
+- **Django сервер** на `http://127.0.0.1:8000`.
+- **Celery worker**, который будет обрабатывать фоновые задачи.
+- **RabbitMQ**, который будет использоваться как брокер сообщений.
