@@ -1,0 +1,46 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}Pay your order{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Order Summary</h1>
+    
+    <table class="table table-bordered table-striped">
+        <thead class="table-light">
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in order.items.all %}
+            <tr>
+                <td class="text-center">
+                    <img src="{% if item.product.image %}{{ item.product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="{{ item.product.name }}" class="img-fluid" style="max-width: 100px;">
+                </td>
+                <td>{{ item.product.name }}</td>
+                <td class="text-end">${{ item.price }}</td>
+                <td class="text-center">{{ item.quantity }}</td>
+                <td class="text-end">${{ item.get_cost }}</td>
+            </tr>
+            {% endfor %}
+            <tr class="table-info">
+                <td colspan="4" class="text-end"><strong>Total</strong></td>
+                <td class="text-end"><strong>${{ order.get_total_cost }}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text-center mt-4">
+        <form action="{% url 'payment:process' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary btn-lg">Pay now</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

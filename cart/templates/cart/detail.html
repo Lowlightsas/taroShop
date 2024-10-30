@@ -1,0 +1,441 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+ Your shopping cart
+{% endblock %}
+{% block content %}
+<style>
+    @import url(//fonts.googleapis.com/css?family=Ubuntu);
+  
+    body {
+        margin:0;
+        padding:0;
+        font-family:helvetica, sans-serif;
+        background-image: url('https://cdn.steamstatic.com/steamcommunity/public/images/items/447120/f173d53b9c696240fba8c45b6ec735f7bc1ce01a.jpg');
+        color: #ffffff; /* Цвет текста по умолчанию */
+    }
+  
+    
+    h1, h2, h3, h4, h5 , h6 {
+        font-family: 'Ubuntu', sans-serif; font-weight:normal;
+    }
+    
+    a {
+        text-decoration:none;
+        color:#5993bb;
+    }
+    
+    a:hover {
+        color:#77b6e2;
+    }
+    
+    a.button, input[type="submit"] {
+        color:#fff;
+        background:#5993bb;
+        border-radius:4px;
+        padding:10px 20px;
+        font-size:14px;
+        border:0;
+    }
+    
+    a.button.light {
+        color:#666;
+        background:#ededed;
+    }
+    
+    .text-left {
+        text-align:left;
+    }
+    
+    .text-right {
+        text-align:right;
+    }
+    
+    table {
+        width:100%;
+        border-spacing:0;
+        border-collapse: collapse;
+    }
+    
+    table th, table td {
+        text-align:left;
+        font-size:14px;
+        padding:10px;
+        margin:0;
+    }
+    
+    tbody tr:nth-child(odd) {
+        background:black;
+    }
+    
+    tbody tr.subtotal {
+        background:#ccc;
+    }
+    
+    thead th, tbody tr.total {
+        background:#213441;
+        color:#fff;
+        font-weight:bold;
+    }
+    
+    table.cart {
+        margin-bottom:40px;
+    }
+    
+    table.cart img {
+        width:180px;
+    }
+    
+    tbody td.num {
+        text-align:right;
+    }
+    
+    td input[type="submit"] {
+        font-size:12px;
+        padding:4px 10px;
+    }
+    
+    form p label, form p input {
+        float:left;
+        clear:both;
+    }
+    
+    form p label {
+        font-size:14px;
+        padding-bottom:4px;
+    }
+    
+    form p input {
+        width:300px;
+        font-size:13px;
+        margin-bottom:10px;
+        padding:10px 12px;
+        border:0;
+        background:#efefef;
+        color:black;
+        border-radius:4px;
+    }
+    
+    ul.errorlist {
+       float:left;
+       color:black;
+       clear:both;
+       font-size:13px;
+       margin:0 0 0 10px;
+       padding:10px 0;
+    }
+    
+    
+    #header {
+        padding:10px 100px;
+        font-size:18px;
+        overflow:auto;
+    }
+    
+    #subheader {
+        background:#ececec;
+        color:black;
+        padding:15px 100px;
+        overflow:auto;
+    }
+    
+    #header .logo {
+        font-family: 'Ubuntu', sans-serif;
+        float:left;
+        color:black;
+        font-size:22px;
+        margin-right:10%;
+    }
+    
+    #subheader .cart {
+        float:right;
+        padding-top:4px;
+    }
+    
+    #content {
+        padding:0 100px;
+        overflow:hidden;
+    }
+    
+    #sidebar {
+        width:220px;
+        padding:30px 20px 0 0;
+        float:left;
+    }
+    
+    #sidebar ul{
+        margin:0;
+        padding:0;
+    }
+    
+    #sidebar ul li {
+        margin:0;
+        list-style:none;
+        padding:10px 14px;
+    }
+    
+    #sidebar ul li a {
+        display:block;
+    }
+    
+    #sidebar ul li.selected {
+        background:#5993bb;
+        border-radius:4px;
+    }
+    
+    #sidebar ul li.selected a {
+        color:#fff;
+    }
+    
+    #main {
+        float:left;
+        width: 96%;
+        margin-right:-220px;
+        overflow:hidden;
+    }
+    
+    .product-list .item {
+        width:25%;
+        padding:10px 20px 10px 0;
+        float:left;
+        text-align:center;
+        line-height:1.2;
+    }
+    
+    .product-list .item img {
+        width:100%;
+        margin-bottom:8px;
+    }
+    
+    .product-detail {
+        text-align:justify;
+    }
+    
+    .product-detail .price {
+        color:#333;
+        font-size:28px;
+        font-weight:bold;
+    }
+    
+    .product-detail img {
+        width:40%;
+        float:left;
+        padding:0 20px 20px 0;
+    }
+    
+    .product-detail h1 {
+        margin-bottom:0;
+    }
+    
+    .product-detail h2 {
+        margin-top:10px;
+    }
+    
+    .order-form {
+        float:left;
+    }
+    
+    .order-info {
+        float:right;
+        width:300px;
+        background:#efefef;
+        padding:10px 20px;
+        color:#333;
+        border-bottom:4px solid #5993bb;
+    }
+    
+    .order-info h3 {
+        color:#5993bb;
+    }
+    
+    .order-info ul li {
+        margin:0;
+        padding:0;
+        font-size:14px;
+    }
+    
+    .order-info p {
+        font-weight:bold;
+        float:right;
+    }
+    
+    .order-info span {
+        float:right;
+    }
+    
+    .neg {
+        color:#dc1616;
+    }
+    
+    .languages {
+       float:right;
+       padding-top:4px;
+       font-size:14px;
+    }
+    
+    .languages ul {
+        list-style:none;
+        margin:0;
+        padding:0;
+        float:left;
+    }
+    
+    .languages ul li {
+        float:left;
+        margin:0 0 0 10px;
+        font-size:14px;
+    }
+    
+    .languages p {
+        float:left;
+        margin:0;
+    }
+    
+    .recommendations {
+        clear:both;
+    }
+    
+    .recommendations div {
+        float:left;
+    }
+    
+    .recommendations img {
+        width:200px
+    }
+    
+    .recommendations p {
+        clear:both;
+    }
+    
+    .recommendations.cart {
+        width:60%;
+        float:left;
+        overflow:auto;
+    }
+    
+    .recommendations.cart h3 {
+        margin-top:0;
+    }
+    
+    .recommendations.cart .item {
+        margin-right:10px;
+    }
+    
+    .recommendations.cart img {
+        width:120px;
+    }
+    
+    /* braintree hosted fields */
+    form div.field {
+        font-size:13px;
+        color:#666;
+        width:300px;
+        height:22px;
+        margin-bottom:10px;
+        padding:6px 12px;
+        border:0;
+        background:#efefef;
+        color:#666;
+        border-radius:4px;
+    }
+  </style>
+
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{%url "shop:home"%}">Harmony of Esotericism</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">f</span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarDark">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{%url "shop:list"%}">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{%url "cart:cart_detail"%}">Корзина</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{%url "favourites:all"%}">Избранные</a>
+              </li>
+             
+                <div class="nav-item dropdown">
+                 
+                  <a class=" nav-link active dropdown-toggle" tabindex="-1" aria-disabled="true" id="dropdownMenuDark" data-bs-toggle="dropdown" >
+                        Пользователь
+                  </a>
+                  
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuDark">
+                      {% if request.user.is_authenticated %}
+                      <li class="nav-item">
+                          <span class="navbar-text">
+                              🕉️ Welcome, <strong>{{ request.user.first_name|default:request.user.username }}</strong> ✨
+                          </span>
+                      </li>
+                      <li><a class="dropdown-item" href="{%url "account:profile"%}">Мой Профиль</a></li>
+                        <li><a class="dropdown-item" href="{%url "account:logout"%}">Выйти</a></li>
+                        {% else %}
+                        <li><a class="dropdown-item" href="{%url "account:login"%}">Войти</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </ul>
+          
+          
+        </div>
+    </div>
+</nav>
+
+ <h1>Your shopping cart</h1>
+ <table class="cart">
+   <thead>
+    <tr>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Remove</th>
+        <th>Unit price</th>
+        <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+             {% for item in cart %}
+               {% with product=item.product %}
+        <tr>
+        <td>
+        <a href="{{ product.get_absolute_url }}">
+        <img src="{% if product.image %}{{ product.image.url }}
+                       {% else %}{% static "img/no_image.png" %}{% endif %}">
+        </a>
+        </td>
+        <td>{{ product.name }}</td>
+        <td> <form action="{% url "cart:cart_add" product.id %}" method="post">
+            {{ item.update_quantity_form.quantity }}
+            {{ item.update_quantity_form.override }}
+            <input type="submit" value="Update">
+            {% csrf_token %}
+          </form></td>
+        <td>
+        <form action="{% url "cart:cart_remove" product.id %}"
+        method="post">
+        <input type="submit" value="Remove">
+                       {% csrf_token %}
+        </form>
+        </td>
+        <td class="num">{{ item.price }}тг.</td>
+        <td class="num">{{ item.total_price }}тг.</td>
+        </tr>
+               {% endwith %}
+             {% endfor %}
+        <tr class="total">
+        <td>Total</td>
+        <td colspan="4"></td>
+        <td class="num">{{ cart.get_total_price }}тг.</td>
+        </tr>
+        </tbody>
+        </table>
+        <p class="text-right">
+        <a href="{% url "shop:list" %}" class="button
+           light">Continue shopping</a>
+        <a href="{% url "orders:order_create" %}" class="button">Checkout</a>
+        </p>
+        {% endblock %}

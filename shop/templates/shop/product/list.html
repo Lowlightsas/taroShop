@@ -1,0 +1,236 @@
+{% extends "shop/base.html" %}
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{%block content%}
+<style>
+    body {
+        background-image: url('https://cdn.steamstatic.com/steamcommunity/public/images/items/447120/f173d53b9c696240fba8c45b6ec735f7bc1ce01a.jpg');
+        color: #ffffff; /* Цвет текста по умолчанию */
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+        color: #00ffb6; /* Цвет заголовков карточек */
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+        color: #9fffd3; /* Цвет описания товара */
+    }
+    
+    .aspect-ratio {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 100%; /* Соотношение сторон 1:1 */
+    }
+    
+    .custom-shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Темная тень для карточек */
+    }
+    
+    
+</style>
+
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="{%url "shop:home"%}">Harmony of Esotericism</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">f</span>
+          </button>
+          <div class="collapse navbar-collapse show" id="navbarDark">
+              <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{%url "shop:list"%}">Товары</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="{%url "cart:cart_detail"%}">Корзина</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{%url "favourites:all"%}">Избранные</a>
+                </li>
+               
+                  <div class="nav-item dropdown">
+                   
+                    <a class=" nav-link active dropdown-toggle" tabindex="-1" aria-disabled="true" id="dropdownMenuDark" data-bs-toggle="dropdown" >
+                          Пользователь
+                    </a>
+                    
+                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuDark">
+                        {% if request.user.is_authenticated %}
+                        <li class="nav-item">
+                            <span class="navbar-text">
+                                🕉️ Welcome, <strong>{{ request.user.first_name|default:request.user.username }}</strong> ✨
+                            </span>
+                        </li>
+                        <li><a class="dropdown-item" href="{%url "account:profile"%}">Мой Профиль</a></li>
+                          <li><a class="dropdown-item" href="{%url "account:logout"%}">Выйти</a></li>
+                          {% else %}
+                          <li><a class="dropdown-item" href="{%url "account:login"%}">Войти</a></li>
+                          {% endif %}
+                      </ul>
+                  </div>
+              </ul>
+            
+            
+          </div>
+      </div>
+  </nav>
+
+  <div class="container my-5">
+    <div class="row">
+        <!-- Sidebar with Categories -->
+        <div id="sidebar" class="col-md-3 mb-4" style="background: #000000ad;">
+            <div class="btn-group-vertical w-100" role="group" aria-label="Categories">
+                <a href="{% url 'shop:list' %}" class="btn btn-outline-secondary {% if not category %}active{% endif %}">
+                    All Categories
+                </a>
+                {% for c in categories %}
+                <a href="{{ c.get_absolute_url }}" class="btn btn-outline-secondary {% if category and category.slug == c.slug %}active{% endif %}">
+                    {{ c.name }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Main Content with Products and Search Form -->
+        <div id="main" class="col-md-9">
+            <!-- Search Form -->
+            <form class="d-flex mb-4" action="{% url 'shop:search' %}" method="get">
+                <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+
+            <!-- Display Results Based on Search or Category -->
+            <div class="row">
+                {% if query %}
+                    <h2 class="text-white">Results for "{{ query }}":</h2>
+                    {% if results %}
+                        {% for product in results %}
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 border-primary rounded custom-shadow" style="background: #000000a3;">
+                                <!-- Product Image -->
+                                {% if product.image %}
+                                <a href="{{ product.get_absolute_url }}">
+                                    <div class="aspect-ratio overflow-hidden" style="position: relative; padding-top: 100%;">
+                                        <img src="{{ product.image.url }}" class="w-100 h-100 position-absolute" style="object-fit: cover; top: 0; left: 0;" alt="{{ product.name }}">
+                                    </div>
+                                </a>
+                                {% else %}
+                                <div class="aspect-ratio overflow-hidden" style="position: relative; padding-top: 100%;">
+                                    <img src="{% static 'deps/img/no_image.jpg' %}" class="w-100 h-100 position-absolute" style="object-fit: cover; top: 0; left: 0;" alt="{{ product.name }}">
+                                </div>
+                                {% endif %}
+                                
+                                <!-- Product Description -->
+                                <div class="card-body">
+                                    <a href="{{ product.get_absolute_url }}" class="text-white" style="text-decoration:none">
+                                        <h5 class="card-title">{{ product.name }}</h5>
+                                    </a>
+                                    <p class="card-text text-truncate" style="color: white">{{ product.description }}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p><strong style="color: white">{{ product.price }}₸</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-white">No results found for "{{ query }}".</p>
+                    {% endif %}
+                {% else %}
+                    {% for product in products %}
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 border-primary rounded custom-shadow" style="background: #000000a3;">
+                            <!-- Product Image -->
+                            {% if product.image %}
+                            <a href="{{ product.get_absolute_url }}">
+                                <div class="aspect-ratio overflow-hidden" style="position: relative; padding-top: 100%;">
+                                    <img src="{{ product.image.url }}" class="w-100 h-100 position-absolute" style="object-fit: cover; top: 0; left: 0;" alt="{{ product.name }}">
+                                </div>
+                            </a>
+                            {% else %}
+                            <div class="aspect-ratio overflow-hidden" style="position: relative; padding-top: 100%;">
+                                <img src="{% static 'deps/img/no_image.jpg' %}" class="w-100 h-100 position-absolute" style="object-fit: cover; top: 0; left: 0;" alt="{{ product.name }}">
+                            </div>
+                            {% endif %}
+                            
+                            <!-- Product Description -->
+                            <div class="card-body">
+                                <a href="{{ product.get_absolute_url }}" class="text-white" style="text-decoration:none">
+                                    <h5 class="card-title">{{ product.name }}</h5>
+                                </a>
+                                <p class="card-text text-truncate" style="color: white">{{ product.description }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p><strong style="color: white">{{ product.price }}₸</strong></p>
+                                </div>
+                                <form action="{% if product in user.favorites.all %}{% url 'favourites:remove_to_fav' product.id %}{% else %}{% url 'favourites:add_to_fav' product.id %}{% endif %}" method="post" class="favorite-form">
+                                    {% csrf_token %}
+                                    <button type="button" 
+                                    class="btn btn-outline-light favorite-btn {% if product in user.favorites.all %}favorited{% endif %}" 
+                                    data-product-id="{{ product.id }}" 
+                                    onclick="toggleFavorite(this)">
+                                <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="{% if product  in user.favorites.all %}red{% else %}white{% endif %}" viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                            
+                                </form>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <!-- Pagination (if needed) -->
+            {% if products.has_other_pages %}
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        {% for page_num in products.paginator.page_range %}
+                            <li class="page-item {% if products.number == page_num %}active{% endif %}">
+                                <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleFavorite(button) {
+        const productId = button.getAttribute('data-product-id');
+        const isFavorited = button.classList.contains('favorited');
+        const url = isFavorited 
+                    ? "{% url 'favourites:remove_to_fav' 0 %}".replace("0", productId)
+                    : "{% url 'favourites:add_to_fav' 0 %}".replace("0", productId);
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({})
+        })
+        .then(response => {
+            if (response.ok) {
+                // Toggle the `favorited` class on the button
+                button.classList.toggle('favorited');
+
+                // Update icon color based on new favorited state
+                const icon = button.querySelector('svg');
+                if (button.classList.contains('favorited')) {
+                    icon.setAttribute('fill', 'red'); // Filled state
+                }
+            }
+        });
+    }
+</script>
+
+    
+{%endblock%}

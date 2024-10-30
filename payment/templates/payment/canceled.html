@@ -1,0 +1,51 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}Payment Canceled{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('https://cdn.steamstatic.com/steamcommunity/public/images/items/447120/f173d53b9c696240fba8c45b6ec735f7bc1ce01a.jpg');
+        color: #ffffff; /* Цвет текста по умолчанию */
+    }
+</style>
+
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0deg 0% 18.27% / 87%)">
+        <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+                <!-- Left side -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="my-5 display-3 fw-bold ls-tight text-light">
+                        Payment Canceled!<br />
+                        <span class="text-danger">There was an issue processing your payment</span>
+                    </h1>
+                    <p style="color: white">
+                        We encountered a problem while processing your payment. Please try again or contact support for assistance.
+                    </p>
+                </div>
+
+                <!-- Right side -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card">
+                        <div class="card-body py-5 px-md-5" style="color:black;">
+                            <h3>Next Steps</h3>
+                            <p>Your payment was not completed. You can:</p>
+                            <ul>
+                                <li>Check your payment details and try again.</li>
+                                <li>Contact our support team for help.</li>
+                                <li>Return to the <a href="{% url 'shop:home' %}" class="text-primary">homepage</a>.</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="{% url 'cart:cart_detail' %}" class="btn btn-primary btn-lg">Try Again</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

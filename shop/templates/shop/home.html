@@ -1,0 +1,168 @@
+{% extends "shop/base.html" %}
+{%load static %}
+{%block title%}Главная{%endblock%}
+{%block content%}
+<header>
+    <style>
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+  
+      .carousel-item:nth-child(1) {
+        background-image: url('https://cdn.steamstatic.com/steamcommunity/public/images/items/447120/f173d53b9c696240fba8c45b6ec735f7bc1ce01a.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+  
+     
+  
+      /* Height for devices larger than 576px */
+      @media (min-width: 1000px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+  
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+      
+      
+    </style>
+  
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="{%url "shop:home"%}">Harmony of Esotericism</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">f</span>
+          </button>
+          <div class="collapse navbar-collapse show" id="navbarDark">
+              <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{%url "shop:list"%}">Товары</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="{%url "cart:cart_detail"%}">Корзина</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{%url "favourites:all"%}">Избранные</a>
+                </li>
+               
+                  <div class="nav-item dropdown">
+                   
+                    <a class=" nav-link active dropdown-toggle" tabindex="-1" aria-disabled="true" id="dropdownMenuDark" data-bs-toggle="dropdown" >
+                          Пользователь
+                    </a>
+                    
+                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuDark">
+                        {% if request.user.is_authenticated %}
+                        <li class="nav-item">
+                            <span class="navbar-text">
+                                🕉️ Welcome, <strong>{{ request.user.first_name|default:request.user.username }}</strong> ✨
+                            </span>
+                        </li>
+                        <li><a class="dropdown-item" href="{%url "account:profile"%}">Мой Профиль</a></li>
+                          <li><a class="dropdown-item" href="{%url "account:logout"%}">Выйти</a></li>
+                          {% else %}
+                          <li><a class="dropdown-item" href="{%url "account:login"%}">Войти</a></li>
+                          {% endif %}
+                      </ul>
+                  </div>
+              </ul>
+            
+            
+          </div>
+      </div>
+  </nav>
+
+    
+    <!-- Navbar -->
+  
+    <!-- Carousel wrapper -->
+    
+      <!-- Inner -->
+      <div class="carousel">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            
+          </div>
+        </div>
+        <!-- Single item -->
+    
+  
+        <!-- Single item -->
+        
+        </div>
+      </div>
+    
+      
+    </div>
+    <!-- Carousel wrapper -->
+  </header>
+
+  <main class="mt-5" style="position: relative">
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row col-lg-8 col-md-12 mb-4">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init data-mdb-ripple-color="dark">
+              <img src="https://i.pinimg.com/736x/7f/96/8e/7f968e3b49017c50a15ed5a775a696a5.jpg" class="img-fluid"/>
+             
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>  
+            </div>
+          </div>
+  
+          <div class="column col-md-5 gx-7 mb-6" style="color:white; background-color: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 50px;">
+            <h1><strong>Гармония Эзотерики</strong></h1>
+            <p class="text" style="white">
+                - это ваш уникальный магазин товаров для практикующих эзотерику и всех, кто интересуется мистическими аспектами жизни. Мы предлагаем широкий ассортимент товаров, включая кристаллы, таро карты, эзотерические книги, амулеты и многое другое
+            </p>
+           
+            <p class="text" style="white">
+                Наш магазин создан для тех, кто ищет гармонию в себе и вокруг. Мы верим, что правильные инструменты и знания могут открыть дверь в мир энергий, интуиции и самопознания
+            </p>
+            <button type="button" class="btn btn-secondary btn-lg" ><a class="text-white" style="text-decoration:none" href="{%url "shop:list"%}">Посмотреть товары</a></button>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+    </div>
+  
+
+    
+      
+   
+      <!--Section: Content-->
+    </div>
+  </main>
+  <!--Main layout-->
+  
+  <!--Footer-->
+  <footer class="bg-dark text-lg-start">
+    <div class="py-4 text-center">
+     
+    </div>
+  
+    <hr class="m-0" />
+  
+    
+  
+    <!-- Copyright -->
+    <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Harmony:
+      <a class="text-white" href="#">harmony.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
+  {%endblock%}

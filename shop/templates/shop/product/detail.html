@@ -1,0 +1,107 @@
+{% extends "shop/base.html" %}
+{%load static %}
+
+{%block content%}
+<style>
+    body {
+        background-image: url('https://cdn.steamstatic.com/steamcommunity/public/images/items/447120/f173d53b9c696240fba8c45b6ec735f7bc1ce01a.jpg');
+        color: #ffffff; /* Цвет текста по умолчанию */
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+        color: #00ffb6; /* Цвет заголовков карточек */
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+        color: #9fffd3; /* Цвет описания товара */
+    }
+    
+    .aspect-ratio {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 100%; /* Соотношение сторон 1:1 */
+    }
+    
+    .custom-shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Темная тень для карточек */
+    }
+    
+</style>
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{%url "shop:home"%}">Harmony of Esotericism</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">f</span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarDark">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{%url "shop:list"%}">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{%url "cart:cart_detail"%}">Корзина</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{%url "favourites:all"%}">Избранные</a>
+              </li>
+             
+                <div class="nav-item dropdown">
+                 
+                  <a class=" nav-link active dropdown-toggle" tabindex="-1" aria-disabled="true" id="dropdownMenuDark" data-bs-toggle="dropdown" >
+                        Пользователь
+                  </a>
+                  
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuDark">
+                      {% if request.user.is_authenticated %}
+                      <li class="nav-item">
+                          <span class="navbar-text">
+                              🕉️ Welcome, <strong>{{ request.user.first_name|default:request.user.username }}</strong> ✨
+                          </span>
+                      </li>
+                      <li><a class="dropdown-item" href="{%url "account:profile"%}">Мой Профиль</a></li>
+                        <li><a class="dropdown-item" href="{%url "account:logout"%}">Выйти</a></li>
+                        {% else %}
+                        <li><a class="dropdown-item" href="{%url "account:login"%}">Войти</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </ul>
+          
+          
+        </div>
+    </div>
+</nav>
+
+<div class="product-detail-page d-flex flex-column flex-md-row align-items-center justify-content-center text-light" style="min-height: 100vh;">
+    <div class="product-image-container text-center mb-4 mb-md-0" style="max-width: 300px;">
+        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="{{ product.name }}" class="product-image img-fluid rounded" style="max-height: 300px; object-fit: cover;">
+    </div>
+    <div class="product-info-container text-center ms-md-5">
+        <div class="product-detail mystical-background p-4 border rounded">
+            <h1 class="display-5">{{ product.name }}</h1>
+            <p class="product-price h4">{{ product.price }}₸</p>
+            <p class="product-description">{{ product.description|linebreaks }}</p>
+            <div class="product-actions mt-4">
+                <form action="{%url "cart:cart_add" product.id%}" method="post" class="mb-3">
+                    {{ cart_product_form }}
+                    {% csrf_token %}
+                    <input type="submit" value="Add to cart">
+                </form>
+                <div>
+                    <a href="{% url 'shop:list' %}" class="btn btn-outline-light me-2">Продолжить покупки</a>
+                    <a href="{% url "orders:order_create" %}" class="btn btn-outline-light">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+{%endblock%}

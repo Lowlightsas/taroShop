@@ -1,0 +1,2403 @@
+[
+{
+  "model": "account.profile",
+  "pk": 1,
+  "fields": {
+    "user": 4,
+    "date_of_birth": "2005-02-10",
+    "phone_number": "+77053360730",
+    "city": "Almaty",
+    "created": "2024-10-23T04:33:05.000Z",
+    "updated": "2024-10-23T08:40:51.153Z",
+    "photo": "user/2024/10/23/Снимок_экрана_2024-10-09_192545.png"
+  }
+},
+{
+  "model": "account.profile",
+  "pk": 5,
+  "fields": {
+    "user": 8,
+    "date_of_birth": "2024-09-16",
+    "phone_number": "87777777777",
+    "city": "Алматы",
+    "created": "2024-10-23T08:42:06.599Z",
+    "updated": "2024-10-23T08:43:27.100Z",
+    "photo": "user/2024/10/23/IMG_6644_5XGMuEM.JPG"
+  }
+},
+{
+  "model": "account.profile",
+  "pk": 6,
+  "fields": {
+    "user": 9,
+    "date_of_birth": null,
+    "phone_number": "",
+    "city": "",
+    "created": "2024-10-23T08:47:50.526Z",
+    "updated": "2024-10-23T08:47:50.526Z",
+    "photo": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-10-16T15:00:55.274Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Caterogy object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-10-16T15:01:03.725Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Caterogy object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-10-16T15:04:21.900Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Гриффит",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-10-16T15:04:58.901Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Гатс",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-10-16T15:06:07.484Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Блокнот Ван Гог",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-10-21T08:33:41.252Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "lowlight",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-10-21T08:33:45.977Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "lowlight",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-10-23T03:53:34.470Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "lowlight",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-10-23T03:53:34.475Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "test1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-10-23T04:33:05.006Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Profile of testik",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-10-23T04:58:14.896Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Profile of testik",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-10-23T05:51:22.311Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Блокнот Ван Гог",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-10-23T05:51:22.318Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Гатс",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-10-23T05:51:22.324Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Гриффит",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-10-23T05:57:16.541Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "test1",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-10-23T05:57:44.555Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "test1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-10-23T06:34:52.881Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "jer",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-10-23T07:02:08.644Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "sultanaevaakbota",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-10-23T08:41:55.585Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Profile of sultanaevaakbota",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-10-23T13:21:17.313Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Камни",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-10-23T13:35:29.442Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Амулет 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-10-23T13:35:58.246Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Амулет 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-10-23T13:36:39.383Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Амулет 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-10-23T13:36:56.784Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Амулет 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-10-23T13:37:39.275Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Амулет 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-10-23T13:38:16.658Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Амулет 6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-10-23T13:39:54.269Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Карты Таро",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-10-23T13:41:13.865Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Карты Таро 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-10-23T14:02:13.484Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Карты Таро 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-10-23T14:02:28.506Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Карты Таро 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-10-23T14:02:42.312Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Карты Таро 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-10-23T14:02:56.621Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Карты Таро 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-10-23T14:03:19.735Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "Карты Таро 6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-10-23T14:03:59.296Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "Карты Таро 7",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-10-23T14:04:36.814Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "17",
+    "object_repr": "Карты Таро 8",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-10-23T14:04:54.770Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "Карты Таро 9",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-10-23T14:05:11.660Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "19",
+    "object_repr": "Карты Таро 10",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-10-23T14:05:29.766Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "20",
+    "object_repr": "Карты Таро 11",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-10-23T14:05:39.172Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Свечи",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-10-23T14:06:38.773Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "Свечи 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-10-23T14:06:54.690Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "22",
+    "object_repr": "Свечи 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-10-23T14:08:08.425Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "23",
+    "object_repr": "Свечи 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-10-23T14:08:28.372Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "24",
+    "object_repr": "Свечи 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-10-23T14:08:50.528Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "25",
+    "object_repr": "Свечи 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-10-23T14:09:01.963Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "26",
+    "object_repr": "Свечи 6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-10-23T14:09:18.027Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "27",
+    "object_repr": "Свечи 7",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-10-24T03:11:17.723Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "5",
+    "object_repr": "Order 5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-10-24T03:11:17.747Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "4",
+    "object_repr": "Order 4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-10-24T03:11:17.761Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "3",
+    "object_repr": "Order 3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-10-24T03:11:17.776Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "2",
+    "object_repr": "Order 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-10-24T03:11:17.790Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "Order 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 7,
+    "codename": "add_caterogy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 7,
+    "codename": "change_caterogy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 7,
+    "codename": "delete_caterogy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 7,
+    "codename": "view_caterogy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add product",
+    "content_type": 8,
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change product",
+    "content_type": 8,
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete product",
+    "content_type": 8,
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view product",
+    "content_type": 8,
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add profile",
+    "content_type": 9,
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change profile",
+    "content_type": 9,
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": 9,
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view profile",
+    "content_type": 9,
+    "codename": "view_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add association",
+    "content_type": 10,
+    "codename": "add_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change association",
+    "content_type": 10,
+    "codename": "change_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete association",
+    "content_type": 10,
+    "codename": "delete_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view association",
+    "content_type": 10,
+    "codename": "view_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add code",
+    "content_type": 11,
+    "codename": "add_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change code",
+    "content_type": 11,
+    "codename": "change_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete code",
+    "content_type": 11,
+    "codename": "delete_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view code",
+    "content_type": 11,
+    "codename": "view_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add nonce",
+    "content_type": 12,
+    "codename": "add_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change nonce",
+    "content_type": 12,
+    "codename": "change_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete nonce",
+    "content_type": 12,
+    "codename": "delete_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view nonce",
+    "content_type": 12,
+    "codename": "view_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add user social auth",
+    "content_type": 13,
+    "codename": "add_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change user social auth",
+    "content_type": 13,
+    "codename": "change_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete user social auth",
+    "content_type": 13,
+    "codename": "delete_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view user social auth",
+    "content_type": 13,
+    "codename": "view_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add partial",
+    "content_type": 14,
+    "codename": "add_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change partial",
+    "content_type": 14,
+    "codename": "change_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete partial",
+    "content_type": 14,
+    "codename": "delete_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view partial",
+    "content_type": 14,
+    "codename": "view_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add cart item",
+    "content_type": 15,
+    "codename": "add_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change cart item",
+    "content_type": 15,
+    "codename": "change_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete cart item",
+    "content_type": 15,
+    "codename": "delete_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view cart item",
+    "content_type": 15,
+    "codename": "view_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add order",
+    "content_type": 16,
+    "codename": "add_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change order",
+    "content_type": 16,
+    "codename": "change_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete order",
+    "content_type": 16,
+    "codename": "delete_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view order",
+    "content_type": 16,
+    "codename": "view_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add order item",
+    "content_type": 17,
+    "codename": "add_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change order item",
+    "content_type": 17,
+    "codename": "change_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete order item",
+    "content_type": 17,
+    "codename": "delete_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view order item",
+    "content_type": 17,
+    "codename": "view_orderitem"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$RSsY1nUHqKpMWZsJ6o32VD$NJWtYMRnGUEoK/n9dcXMvXkepf4mQufc+qc/n8uGHWE=",
+    "last_login": "2024-10-24T06:30:20.359Z",
+    "is_superuser": true,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "test@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-10-16T15:00:05.838Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$gZjn9F9CsrcBlINKxgi3b5$bweHP0W4R8r86tlgUKZ9omx8g1q3L1ddckAdrvHgTuc=",
+    "last_login": "2024-10-25T14:19:54.185Z",
+    "is_superuser": false,
+    "username": "testik",
+    "first_name": "testik",
+    "last_name": "Test",
+    "email": "fhjj3590@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-10-23T03:54:42.590Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "!JXSZIN5jQFggO63iRgUeR80eR5J3TARjutV2Rset",
+    "last_login": "2024-10-23T15:57:35.806Z",
+    "is_superuser": false,
+    "username": "sultanaevaakbota",
+    "first_name": "Jinx",
+    "last_name": "Jer",
+    "email": "sultanaevaakbota@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-10-23T07:02:18.398Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "!L0Wc3vixdTqo1KNXpdSxt1nKihWV6YcH8O1YZHXN",
+    "last_login": "2024-10-23T08:47:50.555Z",
+    "is_superuser": false,
+    "username": "fhjj3590",
+    "first_name": "Jer",
+    "last_name": "Lowlight",
+    "email": "fhjj3590@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-10-23T08:47:50.522Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "shop",
+    "model": "caterogy"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "shop",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "account",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "social_django",
+    "model": "association"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "social_django",
+    "model": "code"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "social_django",
+    "model": "nonce"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "social_django",
+    "model": "usersocialauth"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "social_django",
+    "model": "partial"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "cart",
+    "model": "cartitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "orders",
+    "model": "order"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "orders",
+    "model": "orderitem"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "aqanggvv9hrtvkp98cd8v62p56tzwgl7",
+  "fields": {
+    "session_data": ".eJxVjLkOwjAQBf_FNUSOcYxNydVR0HCkiTbe3YRDMUrMISH-nUSioX0z896iCqG60jjAPdaq6CJEEjOxfOwOWf5aL7bVbW85zyeP5hn8cS_Xq2fuSYxEMRTFvaO2OGGf6P-tBH-hZgB4hqYKiQ9NbE9lMijJj3bJJiBd5z_376CGru5rcjLLJgqgNAotE6eeTabQaG0tpmg1OoXo2DhWyhObqTEOOJVSk3Tcn3poo5i9P58vWmdPBw:1t4KuE:PPhJLiyCzAEmTKEg9SSjoXzz76ZIEoyQVDcT0CXYwvY",
+    "expire_date": "2024-11-24T14:03:10.252Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jh4yfvtdb1x2p5htvqbm8w2oey3b4b70",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm2sRc7JT1nsNbeXRJAiZRPFeXuJFIKaN_Mm1VlXOY2LxOPuSPVKK8uv1vB-ub-APTC_jnoOvTz2BV9KPqkk34MxJ_76f4FWpza_c3JhHB1iAUcRWGxVSA4Au9jJEvRU3JESSCJc5UFbgAJxRrj2STZoxXHWTXrtn0BMSM7bw:1t3oqP:PeEJCsQusbZYCkduS7wgPnrSfgbmiAr7LvFojOFybZ8",
+    "expire_date": "2024-11-23T03:49:05.107Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xs4l177m6efwiekb4jvc3ntbcn78unqm",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm2sRc7JT1nsNbeXRJAiZRPFeXuJFIKaN_Mm1VlXOY2LxOPuSPVKK8uv1vB-ub-APTC_jnoOvTz2BV9KPqkk34MxJ_76f4FWpza_c3JhHB1iAUcRWGxVSA4Au9jJEvRU3JESSCJc5UFbgAJxRrj2STZoxXHWTXrtn0BMSM7bw:1t4LBv:gYtUwsOooMn22e3JyNrzmIMzrCUewR7Pmoa6v7dZdLI",
+    "expire_date": "2024-11-24T14:21:27.654Z"
+  }
+},
+{
+  "model": "shop.caterogy",
+  "pk": 1,
+  "fields": {
+    "name": "Амулет",
+    "slug": "amulet"
+  }
+},
+{
+  "model": "shop.caterogy",
+  "pk": 3,
+  "fields": {
+    "name": "Карты Таро",
+    "slug": "karty-taro"
+  }
+},
+{
+  "model": "shop.caterogy",
+  "pk": 4,
+  "fields": {
+    "name": "Свечи",
+    "slug": "svechi"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "name": "Амулет 1",
+    "slug": "amulet-1",
+    "description": "Амулет 1",
+    "image": "products/2024/10/23/one.jpg",
+    "price": "2222.00",
+    "available": true,
+    "created": "2024-10-23T13:35:29.436Z",
+    "updated": "2024-10-23T13:35:29.436Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "name": "Амулет 2",
+    "slug": "amulet-2",
+    "description": "Амулет 2",
+    "image": "products/2024/10/23/two.jpg",
+    "price": "6556.00",
+    "available": true,
+    "created": "2024-10-23T13:35:58.243Z",
+    "updated": "2024-10-23T13:35:58.243Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "category": 1,
+    "name": "Амулет 3",
+    "slug": "amulet-3",
+    "description": "Амулет 3",
+    "image": "products/2024/10/23/three.jpg",
+    "price": "7777.00",
+    "available": true,
+    "created": "2024-10-23T13:36:39.382Z",
+    "updated": "2024-10-23T13:36:39.382Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "category": 1,
+    "name": "Амулет 4",
+    "slug": "amulet-4",
+    "description": "Амулет 4",
+    "image": "products/2024/10/23/four.jpg",
+    "price": "4444.00",
+    "available": true,
+    "created": "2024-10-23T13:36:56.782Z",
+    "updated": "2024-10-23T13:36:56.782Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "category": 1,
+    "name": "Амулет 5",
+    "slug": "amulet-5",
+    "description": "Амулет 5",
+    "image": "products/2024/10/23/five.jpg",
+    "price": "6666.00",
+    "available": true,
+    "created": "2024-10-23T13:37:39.272Z",
+    "updated": "2024-10-23T13:37:39.272Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "category": 1,
+    "name": "Амулет 6",
+    "slug": "amulet-6",
+    "description": "Амулет 6",
+    "image": "products/2024/10/23/six.jpg",
+    "price": "8888.00",
+    "available": true,
+    "created": "2024-10-23T13:38:16.655Z",
+    "updated": "2024-10-23T13:38:16.655Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 1",
+    "slug": "karty-taro-1",
+    "description": "Карты Таро 1",
+    "image": "products/2024/10/23/1.jpg",
+    "price": "9999.00",
+    "available": true,
+    "created": "2024-10-23T13:41:13.861Z",
+    "updated": "2024-10-23T13:41:13.861Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 11,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 2",
+    "slug": "karty-taro-2",
+    "description": "Карты Таро 2",
+    "image": "products/2024/10/23/2.jpeg",
+    "price": "7569.00",
+    "available": true,
+    "created": "2024-10-23T14:02:13.478Z",
+    "updated": "2024-10-23T14:02:13.478Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 12,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 3",
+    "slug": "karty-taro-3",
+    "description": "Карты Таро 3",
+    "image": "products/2024/10/23/763eca63a2c22ffe5162a7215e24--fen-shuj-i-ezoterika-rasklad-taro.jpg",
+    "price": "1236.00",
+    "available": true,
+    "created": "2024-10-23T14:02:28.502Z",
+    "updated": "2024-10-23T14:02:28.502Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 13,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 4",
+    "slug": "karty-taro-4",
+    "description": "Карты Таро 4",
+    "image": "products/2024/10/23/6061914653.jpg",
+    "price": "8952.00",
+    "available": true,
+    "created": "2024-10-23T14:02:42.308Z",
+    "updated": "2024-10-23T14:02:42.308Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 14,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 5",
+    "slug": "karty-taro-5",
+    "description": "Карты Таро 5",
+    "image": "products/2024/10/23/6243534740.jpg",
+    "price": "2364.00",
+    "available": true,
+    "created": "2024-10-23T14:02:56.617Z",
+    "updated": "2024-10-23T14:02:56.617Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 15,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 6",
+    "slug": "karty-taro-6",
+    "description": "Карты Таро 6",
+    "image": "products/2024/10/23/6570351318.jpg",
+    "price": "8945.00",
+    "available": true,
+    "created": "2024-10-23T14:03:19.732Z",
+    "updated": "2024-10-23T14:03:19.732Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 16,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 7",
+    "slug": "karty-taro-7",
+    "description": "Карты Таро 7",
+    "image": "products/2024/10/23/d7be237fd5fa708d80d1a524a8436d45cc83776d_original.jpeg",
+    "price": "2899.00",
+    "available": true,
+    "created": "2024-10-23T14:03:59.292Z",
+    "updated": "2024-10-23T14:03:59.292Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 17,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 8",
+    "slug": "karty-taro-8",
+    "description": "Карты Таро 8",
+    "image": "products/2024/10/23/i.webp",
+    "price": "8566.00",
+    "available": true,
+    "created": "2024-10-23T14:04:36.811Z",
+    "updated": "2024-10-23T14:04:36.811Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 18,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 9",
+    "slug": "karty-taro-9",
+    "description": "Карты Таро 9",
+    "image": "products/2024/10/23/shop_items_catalog_image27102.jpg",
+    "price": "7756.00",
+    "available": true,
+    "created": "2024-10-23T14:04:54.767Z",
+    "updated": "2024-10-23T14:04:54.767Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 19,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 10",
+    "slug": "karty-taro-10",
+    "description": "Карты Таро 10",
+    "image": "products/2024/10/23/Снимок_экрана_2024-10-23_182928.png",
+    "price": "4566.00",
+    "available": true,
+    "created": "2024-10-23T14:05:11.655Z",
+    "updated": "2024-10-23T14:05:11.656Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 20,
+  "fields": {
+    "category": 3,
+    "name": "Карты Таро 11",
+    "slug": "karty-taro-11",
+    "description": "Карты Таро 11",
+    "image": "products/2024/10/23/Снимок_экрана_2024-10-23_182812.png",
+    "price": "6594.00",
+    "available": true,
+    "created": "2024-10-23T14:05:29.762Z",
+    "updated": "2024-10-23T14:05:29.762Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 21,
+  "fields": {
+    "category": 4,
+    "name": "Свечи 1",
+    "slug": "svechi-1",
+    "description": "Свечи 1",
+    "image": "products/2024/10/23/955127567.jpeg",
+    "price": "2999.00",
+    "available": true,
+    "created": "2024-10-23T14:06:38.770Z",
+    "updated": "2024-10-23T14:06:38.770Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 22,
+  "fields": {
+    "category": 4,
+    "name": "Свечи 2",
+    "slug": "svechi-2",
+    "description": "Свечи 2",
+    "image": "products/2024/10/23/6370772564.jpg",
+    "price": "6668.00",
+    "available": true,
+    "created": "2024-10-23T14:06:54.687Z",
+    "updated": "2024-10-23T14:06:54.687Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 23,
+  "fields": {
+    "category": 4,
+    "name": "Свечи 3",
+    "slug": "svechi-3",
+    "description": "Свечи 3",
+    "image": "products/2024/10/23/6444837394.jpg",
+    "price": "7777.00",
+    "available": true,
+    "created": "2024-10-23T14:08:08.422Z",
+    "updated": "2024-10-23T14:08:08.422Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 24,
+  "fields": {
+    "category": 4,
+    "name": "Свечи 4",
+    "slug": "svechi-4",
+    "description": "Свечи 4",
+    "image": "products/2024/10/23/6647844089.jpg",
+    "price": "9645.00",
+    "available": true,
+    "created": "2024-10-23T14:08:28.369Z",
+    "updated": "2024-10-23T14:08:28.369Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 25,
+  "fields": {
+    "category": 4,
+    "name": "Свечи 5",
+    "slug": "svechi-5",
+    "description": "Свечи 5",
+    "image": "products/2024/10/23/Снимок_экрана_2024-10-23_183231.png",
+    "price": "3333.00",
+    "available": true,
+    "created": "2024-10-23T14:08:50.523Z",
+    "updated": "2024-10-23T14:08:50.523Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 26,
+  "fields": {
+    "category": 4,
+    "name": "Свечи 6",
+    "slug": "svechi-6",
+    "description": "Свечи 6",
+    "image": "products/2024/10/23/Снимок_экрана_2024-10-23_183222.png",
+    "price": "3333.00",
+    "available": true,
+    "created": "2024-10-23T14:09:01.958Z",
+    "updated": "2024-10-23T14:09:01.958Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 27,
+  "fields": {
+    "category": 4,
+    "name": "Свечи 7",
+    "slug": "svechi-7",
+    "description": "Свечи 7",
+    "image": "products/2024/10/23/Снимок_экрана_2024-10-23_183200.png",
+    "price": "5555.00",
+    "available": true,
+    "created": "2024-10-23T14:09:18.024Z",
+    "updated": "2024-10-23T14:09:18.024Z"
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 10,
+  "fields": {
+    "user": 8,
+    "product": 5,
+    "quantity": 2
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 11,
+  "fields": {
+    "user": 8,
+    "product": 6,
+    "quantity": 2
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 37,
+  "fields": {
+    "user": 1,
+    "product": 6,
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 6,
+  "fields": {
+    "first_name": "Акбота",
+    "last_name": "Султанаева",
+    "email": "sultanaevaakbota@gmail.com",
+    "address": "Навои 323",
+    "postal_code": "050000",
+    "city": "Алматы",
+    "created": "2024-10-24T03:07:39.291Z",
+    "updated": "2024-10-24T03:07:39.291Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 7,
+  "fields": {
+    "first_name": "Test",
+    "last_name": "Test",
+    "email": "fhjj3590@gmail.com",
+    "address": "Навои 323",
+    "postal_code": "050000",
+    "city": "Алматы",
+    "created": "2024-10-24T03:17:13.805Z",
+    "updated": "2024-10-24T03:17:13.805Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 8,
+  "fields": {
+    "first_name": "Test",
+    "last_name": "Test",
+    "email": "fhjj3590@gmail.com",
+    "address": "Навои 323",
+    "postal_code": "050000",
+    "city": "Алматы",
+    "created": "2024-10-24T03:20:00.402Z",
+    "updated": "2024-10-24T03:20:00.402Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 9,
+  "fields": {
+    "first_name": "Test",
+    "last_name": "Test",
+    "email": "fhjj3590@gmail.com",
+    "address": "Навои 323",
+    "postal_code": "050000",
+    "city": "Алматы",
+    "created": "2024-10-24T03:20:49.271Z",
+    "updated": "2024-10-24T03:20:49.271Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 10,
+  "fields": {
+    "first_name": "Test",
+    "last_name": "Test",
+    "email": "fhjj3590@gmail.com",
+    "address": "Навои 323",
+    "postal_code": "050000",
+    "city": "Алматы",
+    "created": "2024-10-24T03:48:51.082Z",
+    "updated": "2024-10-24T03:48:51.083Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 11,
+  "fields": {
+    "first_name": "Test",
+    "last_name": "Test",
+    "email": "fhjj3590@gmail.com",
+    "address": "Навои 323",
+    "postal_code": "050000",
+    "city": "Алматы",
+    "created": "2024-10-24T04:06:48.335Z",
+    "updated": "2024-10-24T04:06:48.335Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 12,
+  "fields": {
+    "first_name": "Akbota",
+    "last_name": "Sultanayeva",
+    "email": "fhjj3590@gmail.com",
+    "address": "Kazakhstan",
+    "postal_code": "2222",
+    "city": "Almaty",
+    "created": "2024-10-24T04:40:31.211Z",
+    "updated": "2024-10-24T04:40:31.211Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 13,
+  "fields": {
+    "first_name": "Akbota",
+    "last_name": "Sultanayeva",
+    "email": "fhjj3590@gmail.com",
+    "address": "Kazakhstan",
+    "postal_code": "2222",
+    "city": "Almaty",
+    "created": "2024-10-24T04:41:29.968Z",
+    "updated": "2024-10-24T04:41:29.968Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 14,
+  "fields": {
+    "first_name": "Akbota",
+    "last_name": "Sultanayeva",
+    "email": "fhjj3590@gmail.com",
+    "address": "Kazakhstan",
+    "postal_code": "2222",
+    "city": "Almaty",
+    "created": "2024-10-24T06:25:34.069Z",
+    "updated": "2024-10-24T06:25:34.069Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 15,
+  "fields": {
+    "first_name": "Akbota",
+    "last_name": "Sultanayeva",
+    "email": "fhjj3590@gmail.com",
+    "address": "Kazakhstan",
+    "postal_code": "2222",
+    "city": "Almaty",
+    "created": "2024-10-24T06:27:05.754Z",
+    "updated": "2024-10-24T06:27:05.754Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 16,
+  "fields": {
+    "first_name": "Test",
+    "last_name": "Test",
+    "email": "fhjj3590@gmail.com",
+    "address": "Навои 323",
+    "postal_code": "050000",
+    "city": "Алматы",
+    "created": "2024-10-25T14:02:49.225Z",
+    "updated": "2024-10-25T14:02:49.225Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 17,
+  "fields": {
+    "first_name": "Test",
+    "last_name": "Test",
+    "email": "fhjj3590@gmail.com",
+    "address": "Навои 323",
+    "postal_code": "050000",
+    "city": "Алматы",
+    "created": "2024-10-25T14:20:03.163Z",
+    "updated": "2024-10-25T14:20:03.163Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 6,
+    "product": 5,
+    "price": "6556.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 6,
+  "fields": {
+    "order": 7,
+    "product": 4,
+    "price": "2222.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 7,
+  "fields": {
+    "order": 8,
+    "product": 4,
+    "price": "2222.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 8,
+  "fields": {
+    "order": 9,
+    "product": 19,
+    "price": "4566.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 9,
+  "fields": {
+    "order": 10,
+    "product": 4,
+    "price": "2222.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 10,
+  "fields": {
+    "order": 11,
+    "product": 4,
+    "price": "2222.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 11,
+  "fields": {
+    "order": 12,
+    "product": 4,
+    "price": "2222.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 12,
+  "fields": {
+    "order": 13,
+    "product": 6,
+    "price": "7777.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 13,
+  "fields": {
+    "order": 13,
+    "product": 10,
+    "price": "9999.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 14,
+  "fields": {
+    "order": 13,
+    "product": 8,
+    "price": "6666.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 15,
+  "fields": {
+    "order": 13,
+    "product": 17,
+    "price": "8566.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 16,
+  "fields": {
+    "order": 13,
+    "product": 14,
+    "price": "2364.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 17,
+  "fields": {
+    "order": 13,
+    "product": 25,
+    "price": "3333.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 18,
+  "fields": {
+    "order": 13,
+    "product": 27,
+    "price": "5555.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 19,
+  "fields": {
+    "order": 14,
+    "product": 4,
+    "price": "2222.00",
+    "quantity": 17
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 20,
+  "fields": {
+    "order": 15,
+    "product": 5,
+    "price": "6556.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 21,
+  "fields": {
+    "order": 15,
+    "product": 7,
+    "price": "4444.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 22,
+  "fields": {
+    "order": 15,
+    "product": 12,
+    "price": "1236.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 23,
+  "fields": {
+    "order": 15,
+    "product": 18,
+    "price": "7756.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 24,
+  "fields": {
+    "order": 15,
+    "product": 25,
+    "price": "3333.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 25,
+  "fields": {
+    "order": 15,
+    "product": 27,
+    "price": "5555.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 26,
+  "fields": {
+    "order": 16,
+    "product": 4,
+    "price": "2222.00",
+    "quantity": 3
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 27,
+  "fields": {
+    "order": 17,
+    "product": 4,
+    "price": "2222.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "social_django.usersocialauth",
+  "pk": 2,
+  "fields": {
+    "user": 8,
+    "provider": "google-oauth2",
+    "uid": "sultanaevaakbota@gmail.com",
+    "extra_data": {
+      "auth_time": 1729699055,
+      "expires": 3599,
+      "token_type": "Bearer",
+      "access_token": "ya29.a0AcM612zkKKhNSwoRAsBqRFHXb7klrKCsflnNxizQL3A_t5Q5oKWv3wN-2GuDF8RtHmHpEFsopgjVzIkuZW8O0thEKxkmEJRFon-N74_Y7lPEl-gihvZ6yIirf4I_rM-PTDql6Xd8WvFzKUnAkMnTfi46EP54bNp5lAx1aCgYKAdwSARESFQHGX2MiTe3SGg-LNR0qvwYIKUhaoQ0171"
+    },
+    "created": "2024-10-23T07:02:18.407Z",
+    "modified": "2024-10-23T15:57:35.767Z"
+  }
+},
+{
+  "model": "social_django.usersocialauth",
+  "pk": 3,
+  "fields": {
+    "user": 9,
+    "provider": "google-oauth2",
+    "uid": "fhjj3590@gmail.com",
+    "extra_data": {
+      "auth_time": 1729673270,
+      "expires": 3599,
+      "token_type": "Bearer",
+      "access_token": "ya29.a0AcM612xfxnQNG8gEPu49bwGoeEiPVEEY6_qo1-UaJ_tnflN-Aa1v9s7lOBFP5SR6DY_K0iNZ5A3to8BIB9El0JD8PQmPQ4yEQ5Jie4bE8_aZGRzaet4QRxb5KViFuKI16NWoFAYWte7k-W-KRPJrry0aC5XrUXEDHbuboOpuaCgYKAa0SARASFQHGX2MicCxuFLL4cxS-LvF4m5OaIw0175"
+    },
+    "created": "2024-10-23T08:47:50.529Z",
+    "modified": "2024-10-23T08:47:50.533Z"
+  }
+}
+]

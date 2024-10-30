@@ -1,0 +1,200 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}User Profile{% endblock %}
+{% block content %}
+<style>
+  body {
+      background-image: url('https://cdn.steamstatic.com/steamcommunity/public/images/items/447120/f173d53b9c696240fba8c45b6ec735f7bc1ce01a.jpg');
+      color: #ffffff; /* Цвет текста по умолчанию */
+  }
+</style>
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="{%url "shop:home"%}">Harmony of Esotericism</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">f</span>
+      </button>
+      <div class="collapse navbar-collapse show" id="navbarDark">
+          <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{%url "shop:list"%}">Товары</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="{%url "cart:cart_detail"%}">Корзина</a>
+              </li>
+             
+              <div class="nav-item dropdown">
+               
+                <a class=" nav-link active dropdown-toggle" tabindex="-1" aria-disabled="true" id="dropdownMenuDark" data-bs-toggle="dropdown" >
+                      Пользователь
+                </a>
+                
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuDark">
+                    {% if request.user.is_authenticated %}
+                    <li> Hello, {{ request.user.first_name|default:request.user.username }}</li>
+                    <li><a class="dropdown-item" href="#">Мой Профиль</a></li>
+                      <li><a class="dropdown-item" href="{%url "account:logout"%}">Выйти</a></li>
+                      {% else %}
+                      <li><a class="dropdown-item" href="{%url "account:login"%}">Войти</a></li>
+                      {% endif %}
+                  </ul>
+              </div>
+          </ul>
+      
+      </div>
+  </div>
+</nav>
+
+<section>
+    <div class="container py-5">
+       
+        <div class="row" style="background: #061b1bba;">
+            <div class="col-lg-4" style="background: black;">
+                <div class="card mb-4" style="background: #081d1e;">
+                    <div class="card-body text-center">
+                        {% if profile.photo %}
+                            <img src="{{ profile.photo.url }}" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                        {% else %}
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                        {% endif %}
+                        <h5 class="my-3">{{ user.get_full_name }}</h5>
+                        <p class="text-muted mb-1">Client</p> <!-- Вы можете изменить это на что-то более подходящее -->
+                        <p class="text-muted mb-4">{{ profile.city }}</p> <!-- Город пользователя -->
+                        <div class=" d-flex justify-content-center mb-2">
+                          <p class="text-center"><a href="{% url 'account:edit' %}" class="btn btn-outline-light me-2">Редактировать Профиль</a></p>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 mb-lg-0">
+                    <div class="card-body p-0">
+                        <ul class="list-group list-group-flush rounded-3">
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3" style="background: darkslategray;">
+                                <i class="fas fa-globe fa-lg text-warning"></i>
+                                <a href="{% url 'favourites:all' %}" class="text-decoration-none text-light">
+                                    <i class="fas fa-heart me-2"></i> Избранные
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3" style="background: darkslategray;">
+                                <i class="fab fa-github fa-lg text-body"></i>
+                                <a href="#" class="text-decoration-none text-light" data-bs-toggle="modal" data-bs-target="#ordersModal">
+                                    <i class="fas fa-heart me-2"></i> Мои заказы
+                                </a>
+                            </li>
+                            
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3" style="background: darkslategray;">
+                                <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
+                                <a href="{%url "cart:cart_detail"%}" class="text-decoration-none text-light">
+                                    <i class="fas fa-heart me-2"></i> Моя Корзина
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3" style="background: darkslategray;">
+                                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+                                <a href="{% url 'account:password_change' %}" class="text-decoration-none text-light">
+                                    <i class="fas fa-heart me-2"></i> Изменить Пароль
+                                </a>
+                            </li>
+                            <!-- Добавьте дополнительные пункты при необходимости -->
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body" style="background: #081d1e;">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="text-muted mb-0">Full Name</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-light mb-0">{{ user.get_full_name }}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="text-muted mb-0">Email</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-light mb-0">{{ user.email }}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="text-muted mb-0">Phone</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-light mb-0">{{ profile.phone_number }}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="text-muted mb-0">City</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-light mb-0">{{ profile.city }}</p>
+                            </div>
+                        </div>
+                        <!-- Добавьте дополнительные поля, если это необходимо -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal fade" id="ordersModal" tabindex="-1" aria-labelledby="ordersModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ordersModalLabel" style="color:black;">Мои заказы</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div id="ordersContent">
+                    <!-- Здесь будет контент заказов -->
+                    <ul class="list-group" id="order-list">
+                        <!-- Заказы будут загружены сюда с помощью JS -->
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function loadOrders() {
+        fetch("{% url 'account:order_list' %}")  // Замените на ваш URL
+            .then(response => response.json())
+            .then(data => {
+                const orderList = document.getElementById('order-list');
+                orderList.innerHTML = '';  // Очищаем список перед заполнением
+
+                data.orders.forEach(order => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+
+                    listItem.innerHTML = `
+                        Заказ #${order.id} - ${order.created}
+                        <a href="${order.order_pdf}" class="btn btn-outline-primary btn-sm ms-2" target="_blank">Скачать PDF</a>
+                    `;
+
+                    orderList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке заказов:', error);
+            });
+    }
+
+    // Привязка загрузки заказов к открытию модального окна
+    document.getElementById('ordersModal').addEventListener('show.bs.modal', loadOrders);
+</script>
+
+{% endblock %}

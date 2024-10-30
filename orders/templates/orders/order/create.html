@@ -1,0 +1,59 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+  Checkout
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('https://cdn.steamstatic.com/steamcommunity/public/images/items/447120/f173d53b9c696240fba8c45b6ec735f7bc1ce01a.jpg');
+        color: #ffffff; /* Цвет текста по умолчанию */
+    }
+</style>
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0deg 0% 18.27% / 87%)">
+        <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+                <!-- Left side -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="my-5 display-3 fw-bold ls-tight text-light">
+                        Checkout<br />
+                        <span class="text-primary" style="color: rgb(191 140 255) !important;">Complete Your Purchase</span>
+                    </h1>
+                    <p style="color: white">
+                        Review your order and proceed to payment. Your magical items await!
+                    </p>
+                </div>
+
+                <!-- Right side -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card">
+                        <div class="card-body py-5 px-md-5" style="color:black;">
+                            <h3>Your Order</h3>
+                            <ul class="list-group mb-4">
+                                {% for item in cart %}
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        {{ item.quantity }}x {{ item.product.name }}
+                                        <span class="badge bg-primary rounded-pill">${{ item.total_price }}</span>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            <p class="fw-bold">Total: ${{ cart.get_total_price }}</p>
+                            
+                            <form method="post" class="order-form">
+                                {{ form.as_p }}
+                                {% csrf_token %}
+                                <div class="text-center">
+                                    <p><input type="submit" value="Place Order" class="btn btn-primary btn-lg"></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

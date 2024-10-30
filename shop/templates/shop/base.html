@@ -1,0 +1,59 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+<header>
+    
+  {% block content %}
+
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{%url "shop:home"%}">Harmony of Esotericism</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">f</span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarDark">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{%url "shop:list"%}">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{%url "cart:cart_detail"%}">Корзина</a>
+                </li>
+               
+                <div class="nav-item dropdown">
+                 
+                  <a class=" nav-link active dropdown-toggle" tabindex="-1" aria-disabled="true" id="dropdownMenuDark" data-bs-toggle="dropdown" >
+                        Пользователь
+                  </a>
+                  
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuDark">
+                      {% if request.user.is_authenticated %}
+                      <li> Hello, {{ request.user.first_name|default:request.user.username }}</li>
+                      <li><a class="dropdown-item" href="#">Мой Профиль</a></li>
+                        <li><a class="dropdown-item" href="{%url "account:logout"%}">Выйти</a></li>
+                        {% else %}
+                        <li><a class="dropdown-item" href="{%url "account:login"%}">Войти</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    
+  {% endblock %}
+</div>
+</header>
+
+</html>

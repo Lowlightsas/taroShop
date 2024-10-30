@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python wait_for_db.py && python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=True
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
+      - DATABASE_URL=postgres://taro:0000@db:5432/taro
+      - POSTGRES_DB=taro
+      - POSTGRES_USER=taro
+      - POSTGRES_PASSWORD=0000
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: taro
+      POSTGRES_USER: taro
+      POSTGRES_PASSWORD: 0000
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  celery:
+    build: .
+    command: celery -A myshop worker -l info
+    volumes:
+      - .:/app
+    depends_on:
+      - web
+      - rabbitmq
+
+volumes:
+  postgres_data:

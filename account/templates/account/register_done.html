@@ -1,0 +1,44 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('https://cdn.steamstatic.com/steamcommunity/public/images/items/447120/f173d53b9c696240fba8c45b6ec735f7bc1ce01a.jpg');
+        color: #ffffff; /* Цвет текста по умолчанию */
+    }
+</style>
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0deg 0% 18.27% / 87%)">
+        <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+                <!-- Left side -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="my-5 display-3 fw-bold ls-tight text-light">
+                        Welcome, {{ new_user.first_name }}!<br />
+                        <span class="text-primary" style="color: rgb(191 140 255) !important;">Your Journey Begins Now</span>
+                    </h1>
+                    <p style="color: white">
+                        Ваш аккаунт был успешно создан! Откройте для себя магию и познания, войдя в свой аккаунт.
+                    </p>
+                </div>
+
+                <!-- Right side -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card">
+                        <div class="card-body py-5 px-md-5" style="color:black;">
+                            <h1 class="text-center">Account Created</h1>
+                            <p class="text-center">Now you can <a href="{% url 'account:login' %}" class="text-decoration-underline">log in</a> and explore.</p>
+                            <div class="text-center mt-4">
+                                <a href="{% url 'account:login' %}" class="btn btn-primary btn-lg">Log in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

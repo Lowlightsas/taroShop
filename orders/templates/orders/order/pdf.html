@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Invoice - My Shop</title>
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .invoice-header {
+            border-bottom: 2px solid #007bff;
+            margin-bottom: 20px;
+        }
+        .secondary {
+            color: #6c757d;
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        .total {
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="invoice-header">
+            <h1 class="text-primary">My Shop</h1>
+            <p>
+                Invoice no. <strong>{{ order.id }}</strong><br>
+                <span class="secondary">{{ order.created|date:"M d, Y" }}</span>
+            </p>
+        </div>
+
+        <h3>Bill to</h3>
+        <p>
+            <strong>{{ order.first_name }} {{ order.last_name }}</strong><br>
+            {{ order.email }}<br>
+            {{ order.address }}<br>
+            {{ order.postal_code }}, {{ order.city }}
+        </p>
+
+        <h3>Items Bought</h3>
+        <table class="table table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in order.items.all %}
+                <tr class="row{% cycle "1" "2" %}">
+                    <td>{{ item.product.name }}</td>
+                    <td>${{ item.price }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>${{ item.get_cost }}</td>
+                </tr>
+                {% endfor %}
+                <tr class="total">
+                    <td colspan="3">Total</td>
+                    <td>${{ order.get_total_cost }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Status: 
+            <span class="{% if order.paid %}text-success{% else %}text-danger{% endif %}">
+                {% if order.paid %}Paid{% else %}Pending payment{% endif %}
+            </span>
+        </h4>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
